@@ -17,15 +17,34 @@
         <br>
         <div>
             <h2>Operator</h2>
-            <input type="submit" name="add" value="Add">
-            <input type="submit" name="subtract" value="Subtract">
-            <input type="submit" name="multiply" value="Multiply">
-            <input type="submit" name="divide" value="Divide">
-            <input type="submit" name="modulo" value="Modulo">
+            <input type="submit" name="someshit" value="Add">
+            <input type="submit" name="someshit" value="Subtract">
+            <input type="submit" name="someshit" value="Multiply">
+            <input type="submit" name="someshit" value="Divide">
+            <input type="submit" name="someshit" value="Modulo">
         </div>
     </form>
     <?php
-    
+    if(isset($_POST["someshit"])){
+        switch($_POST["someshit"])
+        {
+            case "Add":
+                echo($_POST['numb1']+$_POST['numb2']);
+            break;
+            case "Subtract":
+                echo($_POST['numb1']-$_POST['numb2']);
+            break;
+            case "Multiply":
+                echo($_POST['numb1']*$_POST['numb2']);
+            break;
+            case "Divide":
+                echo($_POST['numb1']/$_POST['numb2']);
+            break;
+            case "Modulo":
+                echo($_POST['numb1']%$_POST['numb2']);
+            break;
+        }
+    }
     ?>
 </body>
 </html>
